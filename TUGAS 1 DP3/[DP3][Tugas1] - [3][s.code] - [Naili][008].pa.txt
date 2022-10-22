@@ -1,0 +1,28 @@
+program soal3;
+
+uses crt;
+
+var huruf:string;
+
+begin
+clrscr;
+
+write('masukkan huruf  : '); readln(huruf);
+
+case huruf of
+
+'a','i','u','e','o','A','I','U','E','O' : writeln ('vokal');
+
+'b','B','c','C','d','D','f','F','g','G','h','H','j','J','k','K','l','L',
+'m','M','n','N',
+'p','P','q','Q','r','R','s','S','t','T','v','V','w','W','x','X','y','Y','z','Z' :writeln ('konsonan');
+
+else
+
+writeln ('tidak terdefinisi');
+
+end;
+
+readln;
+
+end.
