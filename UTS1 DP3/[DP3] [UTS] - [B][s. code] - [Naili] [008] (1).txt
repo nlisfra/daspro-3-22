@@ -1,0 +1,33 @@
+program kuadran;
+
+uses crt;
+
+var x,y :integer;
+
+begin
+
+clrscr;
+
+writeln ('masukkan nilai x :'); readln(x);
+
+Writeln ('masukkan nilai y :'); readln(y);
+
+
+if (x >0) then
+    
+begin
+    
+	if (y >0) then
+        
+		writeln ('nilai merupakan kuadran I')
+    
+	else if (x>0) or (y>0) then
+    
+		writeln ('nilai merupakan kuadran IV')
+	end 
+	else if (y >0) then
+		writeln('nilai merupakan kuadran II')
+else
+		writeln('nilai merupakan kuadran III')
+
+end.

@@ -1,0 +1,46 @@
+program jampasiir;
+
+uses crt;
+
+var bil,i,j,n:integer;
+
+begin
+
+clrscr;
+
+write('masukkan bilangan bulat :'); readln(bil);
+
+
+
+for i:=bil downto 1 do
+begin
+    
+	for j:=i to bil-1 do 
+       
+		write(' ');
+   
+	for j:=i downto 1 do 
+      
+		write('* ');
+    
+	writeln;
+    
+	end;
+
+for i:=2 to bil do 
+
+begin
+    
+	for j:=i to bil-1 do 
+        
+		write(' ');
+    
+	for j:=1 to i do 
+        
+		write('* ');
+    
+	writeln;
+    
+	end;
+
+end.

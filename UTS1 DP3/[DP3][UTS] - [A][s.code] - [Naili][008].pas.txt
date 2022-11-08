@@ -1,0 +1,43 @@
+program hitungtangga;
+
+uses crt,math;
+
+const rad=0.0174533;
+
+var 	atap,tangga,x:longint;
+
+	n,i,c:real;
+
+begin
+
+clrscr;
+
+
+write('masukkan tinggi atap rumah :'); readln(atap);
+
+write('masukkan sudut tangga      :'); readln(tangga);
+
+writeln;
+
+
+
+
+n:=tangga*0.0174533;
+
+i:=sin(n);
+
+c:=atap/i;
+
+
+x:=ceil(c);
+
+
+
+writeln('panjang tangga minimal adalah :',x);
+
+writeln('-----------------------------------');
+
+
+readln;
+
+end.
