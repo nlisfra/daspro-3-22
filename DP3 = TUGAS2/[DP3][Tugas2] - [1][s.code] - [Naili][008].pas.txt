@@ -1,0 +1,76 @@
+Program Urut_datauas;
+
+uses crt;
+
+var
+
+	i,j,n : integer;
+
+	x : array [0..100] of integer;
+
+
+begin
+
+clrscr;
+
+writeln('DAFTAR NILAI UAS MAHASISWA');
+
+writeln('===========================');
+
+writeln;
+
+write('Masukkan Banyak Mahasiswa : '); readln(n);
+
+writeln;
+
+writeln;
+
+
+
+for i:= 1 to n do
+ 
+begin
+ 
+write('Nilai UAS Mahasiswa ke-',i,' : '); readln(x[i]);
+ 
+writeln;
+
+end;
+
+
+
+
+for i:= 1 to n-1 do
+
+for j:= 1 to n-1 do
+
+begin
+
+if x[j]>x[j+1] then
+
+begin
+
+x[0]:=x[j];
+
+x[j]:=x[j+1];
+
+x[j+1]:=x[0];
+
+end;
+ 
+end;
+ 
+writeln;
+ 
+writeln('Data Nilai Setelah diurutkan :');
+ 
+for i:=n downto 1 do
+
+begin
+ 
+writeln('Nilai UAS :',x[i]);
+
+end;
+
+end.
+

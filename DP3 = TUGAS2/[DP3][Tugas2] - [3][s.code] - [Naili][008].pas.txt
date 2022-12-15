@@ -1,0 +1,118 @@
+uses crt;
+
+type
+    
+	date = record 
+        
+		tanggal : byte;
+        
+		bulan : integer;
+        
+		tahun : integer;
+    
+	end;
+    
+    
+
+	biodata = record
+        
+		nama : string;
+        
+		nim : string;
+        
+		alamat : string;
+        
+		nohp : string;
+        
+		tempat : string;
+        
+		y : date;
+    
+	end;
+    
+
+
+var data : array [1..10] of biodata;
+    
+n : integer;
+    i : integer;
+    
+
+begin
+
+clrscr;
+
+writeln('.............................................');
+
+write ('Banyak Mahasiswa : '); readln(n);
+
+writeln('.............................................');
+
+writeln;
+
+
+for i := 1 to n do 
+
+begin
+ 
+	writeln ('Mahasiswa ', i);
+ 
+	writeln ('=======');
+            
+	write ('Masukkan nama           : '); readln (data[i].nama);
+            
+	write ('Masukkan NIM            : '); readln (data[i].nim);
+            
+	write ('Masukkan Tempat Lahir   : '); readln (data[i].tempat);
+            
+	write ('Masukkan alamat         : '); readln (data[i].alamat);
+            
+	write ('Masukkan No. HP         : '); readln (data[i].nohp);
+            
+	write ('Tanggal                 : '); readln (data[i].y.tanggal);
+            
+	write ('Bulan                   : '); readln (data[i].y.bulan);
+            
+	write ('Tahun                   : '); readln (data[i].y.tahun);
+            
+clrscr;
+        
+end;
+
+
+
+for i := 1 to n do
+        
+begin
+            
+	writeln ('Mahasiswa ', i);
+            
+	writeln ('=======');
+            
+	with data[i] do
+                
+		begin
+                    
+			writeln ('Nama   : ', nama);
+                    
+			writeln ('NIM    : ', nim);
+                    
+			writeln ('alamat : ', alamat);
+                    
+			writeln ('No. HP : ', nohp);
+                    
+			writeln ('TTL    : ', tempat, ', ', y.tanggal, ' ', y.bulan, ' ', y.tahun);
+                    
+			readln;
+                    
+		clrscr;
+                
+	end;
+        
+end;
+
+
+end.
+    
+    
+

@@ -1,0 +1,39 @@
+program haha;
+
+uses crt;
+
+var hasil,bil:integer;
+
+
+procedure faktor(var n,hasil:integer );
+    
+	var i:integer;
+    
+	begin
+        
+		hasil:=1;
+        
+		for i:=1 to n do
+        
+		hasil:=hasil*i;
+    
+	end;
+
+
+
+begin
+
+clrscr;
+    
+write('masukkan bilangan : '); readln(bil);
+    
+faktor(bil,hasil);
+    
+writeln(bil,'! ',hasil);
+
+
+readln;
+
+end.
+
+
